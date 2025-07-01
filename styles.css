@@ -568,32 +568,44 @@ a, li, ul, ol, table, th, td, caption,
     display: inline-flex;
     align-items: center;
     gap: var(--space-2);
-    color: var(--text-secondary);
+    background: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
-    transition: color var(--transition-fast);
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    transition: all var(--transition-fast);
 }
 
 .hero-link:hover {
-    color: var(--text-primary);
+    background: rgba(239, 68, 68, 0.15);
+    border-color: rgba(239, 68, 68, 0.3);
+    color: #b91c1c;
 }
 
 /* Dark theme hero link */
 [data-theme="dark"] .hero-link {
-    color: var(--text-secondary);
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border-color: rgba(239, 68, 68, 0.3);
 }
 
 [data-theme="dark"] .hero-link:hover {
-    color: var(--text-primary);
+    background: rgba(239, 68, 68, 0.2);
+    border-color: rgba(239, 68, 68, 0.4);
+    color: #fca5a5;
 }
 
 .hero-link svg {
     transition: transform var(--transition-fast);
+    opacity: 0.8;
 }
 
 .hero-link:hover svg {
     transform: translateX(2px);
+    opacity: 1;
 }
 
 .hero-link-badge {
@@ -2461,7 +2473,8 @@ a, li, ul, ol, table, th, td, caption,
     }
     
     .hero-link {
-        font-size: 15px;
+        font-size: 14px;
+        padding: 6px 12px;
     }
     
     .hero-image {
