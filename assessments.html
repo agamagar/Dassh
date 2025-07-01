@@ -49,15 +49,7 @@
             <div class="hero-actions">
                 <button class="button-primary large demo-btn">Try Sample Assessment</button>
             </div>
-            
-            <div class="hero-image">
-                <div class="hero-mockup">
-                    <div class="hero-image-container">
-                        <img src="images/header-image.png" alt="Assessment Platform Interface" class="hero-main-image">
-                        <div class="hero-image-glow"></div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </section>
 
@@ -74,91 +66,101 @@
                 <span class="text-secondary">Watch our intelligent testing platform adjust difficulty and question types dynamically, providing accurate measurements while maintaining candidate engagement.</span>
             </p>
             
-            <div class="assessment-types">
-                <div class="assessment-tab-nav">
-                    <button class="assessment-tab active" data-tab="technical">Technical Skills</button>
-                    <button class="assessment-tab" data-tab="cognitive">Cognitive Abilities</button>
-                    <button class="assessment-tab" data-tab="behavioral">Behavioral Traits</button>
-                    <button class="assessment-tab" data-tab="situational">Situational Judgment</button>
+            <div class="assessment-header">
+                <div class="assessment-content-left">
+                    <div class="assessment-intro">
+                        <h3>Intelligent Assessment Platform</h3>
+                        <p>Our AI adapts to each candidate's skill level, providing accurate measurements while maintaining engagement through dynamic question selection.</p>
+                    </div>
                 </div>
                 
-                <div class="assessment-content">
-                    <div class="assessment-panel active" id="technical">
-                        <div class="assessment-details">
-                            <h3>Technical Skills Assessment</h3>
-                            <p>Evaluate coding abilities, technical knowledge, and hands-on problem-solving skills</p>
-                            <ul class="assessment-features">
-                                <li>Live coding challenges with real-time evaluation</li>
-                                <li>Framework-specific questions (React, Python, Java, etc.)</li>
-                                <li>Code review and debugging scenarios</li>
-                                <li>System design and architecture questions</li>
-                                <li>Database and API integration tasks</li>
-                            </ul>
-                        </div>
-                        <div class="assessment-visual">
-                            <div class="mockup-placeholder">
-                                <div class="mockup-icon">💻</div>
-                                <p>Coding Interface</p>
+                <div class="assessment-accordion-right">
+                    <div class="assessment-accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-trigger active" data-target="technical-assessment" aria-expanded="true">
+                                <span class="accordion-title">Technical Skills</span>
+                            </button>
+                            <div class="accordion-content active" id="technical-assessment">
+                                <div class="accordion-features">
+                                    <div class="accordion-feature">
+                                        <h4>Live Coding Challenges</h4>
+                                        <p>Real-time evaluation with framework-specific questions for React, Python, Java, and more.</p>
+                                    </div>
+                                    <div class="accordion-feature">
+                                        <h4>Code Review & Debugging</h4>
+                                        <p>Assess problem-solving skills through code analysis and debugging scenarios.</p>
+                                    </div>
+                                    <div class="accordion-feature">
+                                        <h4>System Design</h4>
+                                        <p>Architecture questions and database integration tasks to evaluate technical depth.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="assessment-panel" id="cognitive">
-                        <div class="assessment-details">
-                            <h3>Cognitive Abilities</h3>
-                            <p>Measure critical thinking, logical reasoning, and learning capacity</p>
-                            <ul class="assessment-features">
-                                <li>Numerical and abstract reasoning</li>
-                                <li>Pattern recognition and logical sequences</li>
-                                <li>Memory and processing speed tests</li>
-                                <li>Attention to detail evaluation</li>
-                                <li>Problem-solving under time pressure</li>
-                            </ul>
-                        </div>
-                        <div class="assessment-visual">
-                            <div class="mockup-placeholder">
-                                <div class="mockup-icon">🧠</div>
-                                <p>Cognitive Tests</p>
+
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" data-target="cognitive-assessment" aria-expanded="false">
+                                <span class="accordion-title">Cognitive Abilities</span>
+                            </button>
+                            <div class="accordion-content" id="cognitive-assessment">
+                                <div class="accordion-features">
+                                    <div class="accordion-feature">
+                                        <h4>Logical Reasoning</h4>
+                                        <p>Numerical and abstract reasoning tests to measure critical thinking capabilities.</p>
+                                    </div>
+                                    <div class="accordion-feature">
+                                        <h4>Pattern Recognition</h4>
+                                        <p>Evaluate learning capacity through pattern recognition and logical sequences.</p>
+                                    </div>
+                                    <div class="accordion-feature">
+                                        <h4>Processing Speed</h4>
+                                        <p>Memory tests and attention to detail evaluation under time pressure.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="assessment-panel" id="behavioral">
-                        <div class="assessment-details">
-                            <h3>Behavioral Traits</h3>
-                            <p>Understand personality, work style, and cultural fit indicators</p>
-                            <ul class="assessment-features">
-                                <li>Big Five personality assessment</li>
-                                <li>Communication and collaboration style</li>
-                                <li>Leadership potential and teamwork</li>
-                                <li>Stress management and resilience</li>
-                                <li>Motivation and career goals alignment</li>
-                            </ul>
-                        </div>
-                        <div class="assessment-visual">
-                            <div class="mockup-placeholder">
-                                <div class="mockup-icon">👥</div>
-                                <p>Personality Profile</p>
+
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" data-target="behavioral-assessment" aria-expanded="false">
+                                <span class="accordion-title">Behavioral Traits</span>
+                            </button>
+                            <div class="accordion-content" id="behavioral-assessment">
+                                <div class="accordion-features">
+                                    <div class="accordion-feature">
+                                        <h4>Personality Assessment</h4>
+                                        <p>Big Five personality evaluation to understand work style and cultural fit.</p>
+                                    </div>
+                                    <div class="accordion-feature">
+                                        <h4>Leadership Potential</h4>
+                                        <p>Assess communication style, teamwork abilities, and leadership capacity.</p>
+                                    </div>
+                                    <div class="accordion-feature">
+                                        <h4>Stress Management</h4>
+                                        <p>Evaluate resilience, motivation, and career goals alignment.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="assessment-panel" id="situational">
-                        <div class="assessment-details">
-                            <h3>Situational Judgment</h3>
-                            <p>Evaluate decision-making in realistic workplace scenarios</p>
-                            <ul class="assessment-features">
-                                <li>Role-specific workplace scenarios</li>
-                                <li>Ethical dilemma responses</li>
-                                <li>Customer service situations</li>
-                                <li>Team conflict resolution</li>
-                                <li>Priority management and delegation</li>
-                            </ul>
-                        </div>
-                        <div class="assessment-visual">
-                            <div class="mockup-placeholder">
-                                <div class="mockup-icon">⚖️</div>
-                                <p>Scenario Analysis</p>
+
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" data-target="situational-assessment" aria-expanded="false">
+                                <span class="accordion-title">Situational Judgment</span>
+                            </button>
+                            <div class="accordion-content" id="situational-assessment">
+                                <div class="accordion-features">
+                                    <div class="accordion-feature">
+                                        <h4>Workplace Scenarios</h4>
+                                        <p>Role-specific situations and ethical dilemma responses to evaluate decision-making.</p>
+                                    </div>
+                                    <div class="accordion-feature">
+                                        <h4>Customer Service</h4>
+                                        <p>Assess customer interaction skills and service excellence capabilities.</p>
+                                    </div>
+                                    <div class="accordion-feature">
+                                        <h4>Team Management</h4>
+                                        <p>Conflict resolution, priority management, and delegation skills evaluation.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -182,37 +184,37 @@
             
             <div class="feature-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
+                    <div class="feature-icon"><i class="ph ph-target"></i></div>
                     <h3>Adaptive Testing</h3>
                     <p>Questions adjust in real-time based on performance, providing accurate skill measurement</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">🚫</div>
+                    <div class="feature-icon"><i class="ph ph-shield-check"></i></div>
                     <h3>Anti-Cheating Technology</h3>
                     <p>Advanced proctoring with browser monitoring, plagiarism detection, and biometric verification</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">📊</div>
+                    <div class="feature-icon"><i class="ph ph-chart-bar"></i></div>
                     <h3>Detailed Analytics</h3>
                     <p>Comprehensive reports with skill breakdowns, competency mapping, and improvement recommendations</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
+                    <div class="feature-icon"><i class="ph ph-lightning"></i></div>
                     <h3>Instant Scoring</h3>
                     <p>Immediate results with confidence intervals and percentile rankings</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
+                    <div class="feature-icon"><i class="ph ph-palette"></i></div>
                     <h3>Custom Assessments</h3>
                     <p>Build role-specific tests with your own questions and evaluation criteria</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">📱</div>
+                    <div class="feature-icon"><i class="ph ph-device-mobile"></i></div>
                     <h3>Multi-Platform Support</h3>
                     <p>Works seamlessly on desktop, tablet, and mobile devices with offline capability</p>
                 </div>
@@ -230,7 +232,7 @@
             <h2 class="ai-stack-title">Tailored for Every Industry</h2>
             <div class="industry-grid">
                 <div class="industry-card">
-                    <div class="industry-icon">💼</div>
+                    <div class="industry-icon"><i class="ph ph-briefcase"></i></div>
                     <h3>Finance & Banking</h3>
                     <p>Risk assessment, compliance knowledge, and quantitative analysis skills</p>
                     <div class="industry-skills">
@@ -241,7 +243,7 @@
                 </div>
                 
                 <div class="industry-card">
-                    <div class="industry-icon">⚕️</div>
+                    <div class="industry-icon"><i class="ph ph-stethoscope"></i></div>
                     <h3>Healthcare</h3>
                     <p>Medical knowledge, patient care scenarios, and clinical decision-making</p>
                     <div class="industry-skills">
@@ -252,7 +254,7 @@
                 </div>
                 
                 <div class="industry-card">
-                    <div class="industry-icon">🛍️</div>
+                    <div class="industry-icon"><i class="ph ph-shopping-cart"></i></div>
                     <h3>Retail & E-commerce</h3>
                     <p>Customer service excellence, sales aptitude, and product knowledge</p>
                     <div class="industry-skills">
@@ -263,7 +265,7 @@
                 </div>
                 
                 <div class="industry-card">
-                    <div class="industry-icon">🏭</div>
+                    <div class="industry-icon"><i class="ph ph-factory"></i></div>
                     <h3>Manufacturing</h3>
                     <p>Safety protocols, quality control, and operational efficiency assessment</p>
                     <div class="industry-skills">
@@ -330,20 +332,40 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>Dassh</h3>
-                    <p class="footer-tagline">AI-powered hiring that finds the right talent for your team.</p>
+                    <p class="footer-tagline">AI-powered screening that adapts to your roles & hiring style. Making recruitment faster, more precise, and surprisingly affordable.</p>
                 </div>
                 <div class="footer-links">
                     <div class="footer-section">
-                        <h4>Features</h4>
+                        <h4>Product</h4>
                         <a href="cv-screening.html">CV Screening</a>
                         <a href="ai-call.html">AI Call</a>
                         <a href="assessments.html">Assessments</a>
+                        <a href="#workflows">Custom Workflows</a>
+                        <a href="#integrations">Integrations</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Solutions</h4>
+                        <a href="#hr-agencies">HR Agencies</a>
+                        <a href="#small-companies">Small Companies</a>
+                        <a href="#enterprise">Enterprise</a>
+                        <a href="#startups">Startups</a>
+                        <a href="#recruitment">Recruitment Firms</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Resources</h4>
+                        <a href="#blog">Blog</a>
+                        <a href="#docs">Documentation</a>
+                        <a href="#case-studies">Case Studies</a>
+                        <a href="#webinars">Webinars</a>
+                        <a href="#support">Support</a>
                     </div>
                     <div class="footer-section">
                         <h4>Company</h4>
                         <a href="#about">About</a>
                         <a href="#careers">Careers</a>
                         <a href="#contact">Contact</a>
+                        <a href="#privacy">Privacy</a>
+                        <a href="#terms">Terms</a>
                     </div>
                 </div>
             </div>
@@ -400,24 +422,34 @@
 
     <script src="script.js"></script>
     <script>
-        // Assessment tab functionality
+        // Assessment accordion functionality - Similar to FAQ accordion
         document.addEventListener('DOMContentLoaded', function() {
-            const tabs = document.querySelectorAll('.assessment-tab');
-            const panels = document.querySelectorAll('.assessment-panel');
+            const accordionTriggers = document.querySelectorAll('.assessment-accordion .accordion-trigger');
             
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    // Remove active class from all tabs and panels
-                    tabs.forEach(t => t.classList.remove('active'));
-                    panels.forEach(p => p.classList.remove('active'));
+            accordionTriggers.forEach(trigger => {
+                trigger.addEventListener('click', function() {
+                    const targetId = this.getAttribute('data-target');
+                    const content = document.getElementById(targetId);
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
                     
-                    // Add active class to clicked tab
-                    tab.classList.add('active');
+                    // Close all accordion items
+                    accordionTriggers.forEach(t => {
+                        const otherId = t.getAttribute('data-target');
+                        const otherContent = document.getElementById(otherId);
+                        t.setAttribute('aria-expanded', 'false');
+                        t.classList.remove('active');
+                        if (otherContent) {
+                            otherContent.classList.remove('active');
+                        }
+                    });
                     
-                    // Show corresponding panel
-                    const targetPanel = document.getElementById(tab.dataset.tab);
-                    if (targetPanel) {
-                        targetPanel.classList.add('active');
+                    // Open clicked item if not already active
+                    if (!isExpanded) {
+                        this.setAttribute('aria-expanded', 'true');
+                        this.classList.add('active');
+                        if (content) {
+                            content.classList.add('active');
+                        }
                     }
                 });
             });

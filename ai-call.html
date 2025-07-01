@@ -49,15 +49,7 @@
             <div class="hero-actions">
                 <button class="button-primary large demo-btn">Experience AI Call</button>
             </div>
-            
-            <div class="hero-image">
-                <div class="hero-mockup">
-                    <div class="hero-image-container">
-                        <img src="images/header-image.png" alt="AI Call Interface" class="hero-main-image">
-                        <div class="hero-image-glow"></div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </section>
 
@@ -75,48 +67,73 @@
             </p>
             
             <div class="phone-demo-container">
-                <div class="phone-mockup">
-                    <div class="phone-screen">
-                        <div class="phone-header">
-                            <div class="phone-time">9:41</div>
-                            <div class="phone-signal">
-                                <div class="signal-bar"></div>
-                                <div class="signal-bar"></div>
-                                <div class="signal-bar"></div>
-                                <div class="signal-bar"></div>
-                            </div>
-                        </div>
-                        <div class="phone-content">
-                            <div class="call-status">
-                                <div class="call-icon">
-                                    <i class="ph ph-phone"></i>
+                <div class="phone-demo-content">
+                    <div class="phone-mockup">
+                        <div class="phone-bezel">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <div class="phone-status-bar">
+                                    <div class="status-left">
+                                        <span class="status-time">9:41</span>
+                                    </div>
+                                    <div class="status-right">
+                                        <div class="status-icons">
+                                            <div class="signal-strength">
+                                                <div class="signal-dot active"></div>
+                                                <div class="signal-dot active"></div>
+                                                <div class="signal-dot active"></div>
+                                                <div class="signal-dot active"></div>
+                                            </div>
+                                            <div class="battery-icon">
+                                                <div class="battery-level"></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <h3>Incoming Call</h3>
-                                <p class="call-subtitle">Dassh AI Assistant</p>
-                                <div class="call-description">
-                                    Ready to demonstrate professional AI conversations
+                                
+                                <div class="call-interface">
+                                    <div class="call-avatar">
+                                        <div class="avatar-ring"></div>
+                                        <div class="avatar-icon">
+                                            <i class="ph ph-robot"></i>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="call-info">
+                                        <p class="call-status-text">Incoming call</p>
+                                        <h3 class="caller-name">Dassh AI Assistant</h3>
+                                        <p class="call-number">+1 (555) AI-DEMO</p>
+                                    </div>
+                                    
+
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="demo-input-section">
-                    <div class="input-group">
-                        <label for="phone-input">Enter your phone number</label>
-                        <div class="phone-input-container">
-                            <input 
-                                type="tel" 
-                                id="phone-input" 
-                                placeholder="+1 (555) 123-4567" 
-                                class="phone-input"
-                            >
-                            <button type="button" class="demo-call-btn" onclick="requestDemoCall()">
-                                <i class="ph ph-phone"></i>
-                                Get Demo Call
-                            </button>
+                    
+                    <div class="demo-form">
+                        <div class="form-content">
+                            <h3 class="form-title">Try it yourself</h3>
+                            <p class="form-description">Experience our AI in action with a live demo call</p>
+                            
+                            <div class="input-field">
+                                <input 
+                                    type="tel" 
+                                    id="phone-input" 
+                                    placeholder="Enter your phone number" 
+                                    class="phone-input"
+                                >
+                                <button type="button" class="demo-call-btn" onclick="requestDemoCall()">
+                                    <span class="btn-text">Get Demo Call</span>
+                                    <i class="ph ph-arrow-right"></i>
+                                </button>
+                            </div>
+                            
+                            <p class="demo-note">
+                                <i class="ph ph-info"></i>
+                                We'll call you within 30 seconds
+                            </p>
                         </div>
-                        <p class="input-note">We'll call you within 30 seconds to demonstrate our AI</p>
                     </div>
                 </div>
             </div>
@@ -138,7 +155,7 @@
             
             <div class="use-cases-grid">
                 <div class="use-case-card">
-                    <div class="use-case-icon">📋</div>
+                    <div class="use-case-icon"><i class="ph ph-clipboard-text"></i></div>
                     <h3>Information Delivery</h3>
                     <p>Automatically deliver important updates, policy changes, and announcements to employees or customers</p>
                     <div class="use-case-details">
@@ -152,7 +169,7 @@
                 </div>
                 
                 <div class="use-case-card">
-                    <div class="use-case-icon">🤝</div>
+                    <div class="use-case-icon"><i class="ph ph-handshake"></i></div>
                     <h3>Employee Retention</h3>
                     <p>Proactive check-ins and satisfaction surveys to identify at-risk employees before they leave</p>
                     <div class="use-case-details">
@@ -166,7 +183,7 @@
                 </div>
                 
                 <div class="use-case-card">
-                    <div class="use-case-icon">✅</div>
+                    <div class="use-case-icon"><i class="ph ph-check-circle"></i></div>
                     <h3>Verification & Collection</h3>
                     <p>Standardize information gathering and verification processes across your organization</p>
                     <div class="use-case-details">
@@ -180,7 +197,7 @@
                 </div>
                 
                 <div class="use-case-card">
-                    <div class="use-case-icon">📞</div>
+                    <div class="use-case-icon"><i class="ph ph-phone-call"></i></div>
                     <h3>Call Assignment & Routing</h3>
                     <p>Intelligent call distribution and preliminary screening before human handoff</p>
                     <div class="use-case-details">
@@ -219,37 +236,37 @@
             
             <div class="feature-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🎙️</div>
+                    <div class="feature-icon"><i class="ph ph-microphone"></i></div>
                     <h3>Natural Voice Interaction</h3>
                     <p>Crystal-clear voice synthesis with natural speech patterns, pauses, and conversational flow</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">🧠</div>
+                    <div class="feature-icon"><i class="ph ph-brain"></i></div>
                     <h3>Adaptive Questioning</h3>
                     <p>AI adjusts questions based on candidate responses, diving deeper into relevant areas</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">🌍</div>
+                    <div class="feature-icon"><i class="ph ph-globe"></i></div>
                     <h3>Multi-Language Support</h3>
                     <p>Conduct interviews in 40+ languages with cultural awareness and local context</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">⏰</div>
+                    <div class="feature-icon"><i class="ph ph-clock"></i></div>
                     <h3>24/7 Availability</h3>
                     <p>Schedule calls anytime, anywhere. Perfect for global hiring across time zones</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">📊</div>
+                    <div class="feature-icon"><i class="ph ph-chart-bar"></i></div>
                     <h3>Real-Time Analysis</h3>
                     <p>Live sentiment analysis, keyword detection, and behavioral pattern recognition</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
+                    <div class="feature-icon"><i class="ph ph-shield-check"></i></div>
                     <h3>GDPR Compliant</h3>
                     <p>Secure, encrypted calls with automatic data retention compliance and consent management</p>
                 </div>
@@ -271,7 +288,7 @@
             </p>
             <div class="use-cases-grid">
                 <div class="use-case-card">
-                    <div class="use-case-icon">🏢</div>
+                    <div class="use-case-icon"><i class="ph ph-buildings"></i></div>
                     <h3>Volume Hiring</h3>
                     <p>Screen hundreds of candidates for retail, customer service, and entry-level positions</p>
                     <div class="use-case-details">
@@ -285,7 +302,7 @@
                 </div>
                 
                 <div class="use-case-card">
-                    <div class="use-case-icon">⚕️</div>
+                    <div class="use-case-icon"><i class="ph ph-stethoscope"></i></div>
                     <h3>Healthcare Staffing</h3>
                     <p>Specialized screening for medical professionals with compliance and certification checks</p>
                     <div class="use-case-details">
@@ -299,7 +316,7 @@
                 </div>
                 
                 <div class="use-case-card">
-                    <div class="use-case-icon">💼</div>
+                    <div class="use-case-icon"><i class="ph ph-briefcase"></i></div>
                     <h3>Executive Search</h3>
                     <p>Confidential, high-level conversations for senior role candidates</p>
                     <div class="use-case-details">
@@ -365,20 +382,40 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>Dassh</h3>
-                    <p class="footer-tagline">AI-powered hiring that finds the right talent for your team.</p>
+                    <p class="footer-tagline">AI-powered screening that adapts to your roles & hiring style. Making recruitment faster, more precise, and surprisingly affordable.</p>
                 </div>
                 <div class="footer-links">
                     <div class="footer-section">
-                        <h4>Features</h4>
+                        <h4>Product</h4>
                         <a href="cv-screening.html">CV Screening</a>
                         <a href="ai-call.html">AI Call</a>
                         <a href="assessments.html">Assessments</a>
+                        <a href="#workflows">Custom Workflows</a>
+                        <a href="#integrations">Integrations</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Solutions</h4>
+                        <a href="#hr-agencies">HR Agencies</a>
+                        <a href="#small-companies">Small Companies</a>
+                        <a href="#enterprise">Enterprise</a>
+                        <a href="#startups">Startups</a>
+                        <a href="#recruitment">Recruitment Firms</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Resources</h4>
+                        <a href="#blog">Blog</a>
+                        <a href="#docs">Documentation</a>
+                        <a href="#case-studies">Case Studies</a>
+                        <a href="#webinars">Webinars</a>
+                        <a href="#support">Support</a>
                     </div>
                     <div class="footer-section">
                         <h4>Company</h4>
                         <a href="#about">About</a>
                         <a href="#careers">Careers</a>
                         <a href="#contact">Contact</a>
+                        <a href="#privacy">Privacy</a>
+                        <a href="#terms">Terms</a>
                     </div>
                 </div>
             </div>

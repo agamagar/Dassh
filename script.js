@@ -54,6 +54,9 @@ function initThemeToggle() {
             moonIcon.style.display = 'none';
         }
         
+        // Switch header image based on theme
+        switchHeaderImage(newTheme);
+        
         // Add smooth transition
         document.documentElement.style.transition = 'all 0.3s ease';
         setTimeout(() => {
@@ -62,7 +65,17 @@ function initThemeToggle() {
     });
 }
 
-
+// Switch header image based on theme
+function switchHeaderImage(theme) {
+    const heroImage = document.getElementById('hero-main-image');
+    if (heroImage) {
+        if (theme === 'dark') {
+            heroImage.src = 'images/header-image.png';
+        } else {
+            heroImage.src = 'images/header-image-light-mode.png';
+        }
+    }
+}
 
 // Set initial theme based on user preference
 function setInitialTheme() {
@@ -83,6 +96,9 @@ function setInitialTheme() {
         sunIcon.style.display = 'block';
         moonIcon.style.display = 'none';
     }
+    
+    // Set initial header image
+    switchHeaderImage(theme);
 }
 
 // Scale tabs functionality
@@ -978,7 +994,7 @@ function initEnhancedContactForm() {
             successMsg.className = 'form-success';
             successMsg.innerHTML = `
                 <div style="text-align: center; padding: 2rem;">
-                    <div style="font-size: 48px; margin-bottom: 1rem;">✅</div>
+                    <div style="font-size: 48px; margin-bottom: 1rem;"><i class="ph ph-check-circle" style="color: #22c55e;"></i></div>
                     <h3 style="margin-bottom: 0.5rem; color: var(--text-primary);">Request Sent!</h3>
                     <p style="color: var(--text-secondary);">We'll get back to you within 24 hours.</p>
                 </div>
