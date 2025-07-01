@@ -1,0 +1,15 @@
+{
+  "name": "dasshai_website",
+  "version": "1.0.0",
+  "description": "A beautiful, modern landing page built with inspiration from [21st.dev](https://21st.dev/home)'s design principles and component library.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.13.2"
+  }
+}

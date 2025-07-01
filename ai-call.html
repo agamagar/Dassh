@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Call - Dassh | Automated Candidate Interviews</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://use.typekit.net/dhl5zqv.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="/" class="nav-logo">Dassh</a>
+                <div class="nav-links">
+                    <a href="cv-screening.html">CV Screening</a>
+                    <a href="ai-call.html" class="active">AI Call</a>
+                    <a href="assessments.html">Assessments</a>
+                </div>
+            </div>
+            <div class="nav-right">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                    <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                </button>
+                <button class="nav-button primary" id="demo-btn">Request Demo</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1 class="hero-title">
+                AI that conducts professional calls so you don't have to
+            </h1>
+            <p class="hero-description">
+                <span class="text-primary">Scale your business operations with AI-powered phone conversations that never sleep.</span> 
+                <span class="text-secondary">From candidate screening to employee retention, information delivery to verification—conduct natural, professional conversations that scale with your company's growth.</span>
+            </p>
+            <div class="hero-actions">
+                <button class="button-primary large demo-btn">Experience AI Call</button>
+            </div>
+            
+            <div class="hero-image">
+                <div class="hero-mockup">
+                    <div class="hero-image-container">
+                        <img src="images/header-image.png" alt="AI Call Interface" class="hero-main-image">
+                        <div class="hero-image-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo Section -->
+    <section class="demo-section">
+        <div class="demo-container">
+            <div class="section-badge badge-blue">
+                <i class="ph ph-robot"></i>
+                <span>Live Demo</span>
+            </div>
+            <h2 class="demo-title">Experience AI Call in Action</h2>
+            <p class="demo-subtitle">
+                <span class="text-primary">Get a live demonstration of our AI conducting a professional conversation.</span> 
+                <span class="text-secondary">Enter your phone number below and receive a sample call to experience the natural, human-like interaction firsthand.</span>
+            </p>
+            
+            <div class="phone-demo-container">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="phone-header">
+                            <div class="phone-time">9:41</div>
+                            <div class="phone-signal">
+                                <div class="signal-bar"></div>
+                                <div class="signal-bar"></div>
+                                <div class="signal-bar"></div>
+                                <div class="signal-bar"></div>
+                            </div>
+                        </div>
+                        <div class="phone-content">
+                            <div class="call-status">
+                                <div class="call-icon">
+                                    <i class="ph ph-phone"></i>
+                                </div>
+                                <h3>Incoming Call</h3>
+                                <p class="call-subtitle">Dassh AI Assistant</p>
+                                <div class="call-description">
+                                    Ready to demonstrate professional AI conversations
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="demo-input-section">
+                    <div class="input-group">
+                        <label for="phone-input">Enter your phone number</label>
+                        <div class="phone-input-container">
+                            <input 
+                                type="tel" 
+                                id="phone-input" 
+                                placeholder="+1 (555) 123-4567" 
+                                class="phone-input"
+                            >
+                            <button type="button" class="demo-call-btn" onclick="requestDemoCall()">
+                                <i class="ph ph-phone"></i>
+                                Get Demo Call
+                            </button>
+                        </div>
+                        <p class="input-note">We'll call you within 30 seconds to demonstrate our AI</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Beyond Hiring Section -->
+    <section class="ai-stack-section">
+        <div class="ai-stack-container">
+            <div class="section-badge badge-teal">
+                <i class="ph ph-lightbulb"></i>
+                <span>Beyond Hiring</span>
+            </div>
+            <h2 class="ai-stack-title">AI Calls for Every Business Need</h2>
+            <p class="ai-stack-description">
+                <span class="text-primary">While hiring is our primary focus, AI Call adapts to solve communication challenges across your entire organization.</span> 
+                <span class="text-secondary">Scale your human operations without the human limitations—perfect for companies that need consistent, professional communication at any volume.</span>
+            </p>
+            
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div class="use-case-icon">📋</div>
+                    <h3>Information Delivery</h3>
+                    <p>Automatically deliver important updates, policy changes, and announcements to employees or customers</p>
+                    <div class="use-case-details">
+                        <ul>
+                            <li>Company policy updates</li>
+                            <li>Benefits enrollment reminders</li>
+                            <li>Training program notifications</li>
+                            <li>Compliance requirement alerts</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <div class="use-case-icon">🤝</div>
+                    <h3>Employee Retention</h3>
+                    <p>Proactive check-ins and satisfaction surveys to identify at-risk employees before they leave</p>
+                    <div class="use-case-details">
+                        <ul>
+                            <li>Regular satisfaction surveys</li>
+                            <li>Exit interview alternatives</li>
+                            <li>Career development discussions</li>
+                            <li>Workplace culture feedback</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <div class="use-case-icon">✅</div>
+                    <h3>Verification & Collection</h3>
+                    <p>Standardize information gathering and verification processes across your organization</p>
+                    <div class="use-case-details">
+                        <ul>
+                            <li>Employee data verification</li>
+                            <li>Reference check automation</li>
+                            <li>Compliance documentation</li>
+                            <li>Survey data collection</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <div class="use-case-icon">📞</div>
+                    <h3>Call Assignment & Routing</h3>
+                    <p>Intelligent call distribution and preliminary screening before human handoff</p>
+                    <div class="use-case-details">
+                        <ul>
+                            <li>Inquiry categorization</li>
+                            <li>Urgency assessment</li>
+                            <li>Skill-based routing</li>
+                            <li>Information pre-collection</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="use-case-cta">
+                <p class="outcome-text">
+                    <span class="highlight">Scale without limits</span> • 
+                    <span class="highlight">Consistent quality</span> • 
+                    <span class="highlight">Human-level empathy</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="scale-section">
+        <div class="scale-container">
+            <div class="section-badge badge-purple">
+                <i class="ph ph-chat-circle"></i>
+                <span>Key Features</span>
+            </div>
+            <h2 class="scale-title">Human-Like Conversations, Superhuman Efficiency</h2>
+            <p class="scale-subtitle">
+                <span class="text-primary">Advanced conversational AI that adapts to each candidate while maintaining perfect consistency.</span> 
+                <span class="text-secondary">Every interaction is personalized yet standardized, ensuring fair evaluation while delivering genuine engagement that candidates remember positively.</span>
+            </p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎙️</div>
+                    <h3>Natural Voice Interaction</h3>
+                    <p>Crystal-clear voice synthesis with natural speech patterns, pauses, and conversational flow</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Adaptive Questioning</h3>
+                    <p>AI adjusts questions based on candidate responses, diving deeper into relevant areas</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Multi-Language Support</h3>
+                    <p>Conduct interviews in 40+ languages with cultural awareness and local context</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>24/7 Availability</h3>
+                    <p>Schedule calls anytime, anywhere. Perfect for global hiring across time zones</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Real-Time Analysis</h3>
+                    <p>Live sentiment analysis, keyword detection, and behavioral pattern recognition</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>GDPR Compliant</h3>
+                    <p>Secure, encrypted calls with automatic data retention compliance and consent management</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="ai-stack-section">
+        <div class="ai-stack-container">
+            <div class="section-badge badge-green">
+                <i class="ph ph-briefcase"></i>
+                <span>Hiring Excellence</span>
+            </div>
+            <h2 class="ai-stack-title">Transform Your Hiring at Every Scale</h2>
+            <p class="ai-stack-description">
+                <span class="text-primary">Our primary expertise: revolutionizing how companies hire by solving the inherent challenges of human-driven processes.</span> 
+                <span class="text-secondary">Scale your hiring operations without incurring large costs or sacrificing quality—because systems that grow with your company are the only sustainable solution.</span>
+            </p>
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div class="use-case-icon">🏢</div>
+                    <h3>Volume Hiring</h3>
+                    <p>Screen hundreds of candidates for retail, customer service, and entry-level positions</p>
+                    <div class="use-case-details">
+                        <ul>
+                            <li>Basic qualification screening</li>
+                            <li>Availability and scheduling</li>
+                            <li>Work authorization status</li>
+                            <li>Salary expectations</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <div class="use-case-icon">⚕️</div>
+                    <h3>Healthcare Staffing</h3>
+                    <p>Specialized screening for medical professionals with compliance and certification checks</p>
+                    <div class="use-case-details">
+                        <ul>
+                            <li>License verification questions</li>
+                            <li>Experience validation</li>
+                            <li>Availability for shifts</li>
+                            <li>Cultural fit assessment</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <div class="use-case-icon">💼</div>
+                    <h3>Executive Search</h3>
+                    <p>Confidential, high-level conversations for senior role candidates</p>
+                    <div class="use-case-details">
+                        <ul>
+                            <li>Strategic thinking assessment</li>
+                            <li>Leadership experience</li>
+                            <li>Cultural alignment</li>
+                            <li>Confidential salary discussions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Metrics -->
+    <section class="scale-section">
+        <div class="scale-container">
+            <h2 class="scale-title">Proven Results Across Industries</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-stat">85%</div>
+                    <h3>Time Saved</h3>
+                    <p>Reduce recruiter time spent on initial screening calls</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-stat">4.8★</div>
+                    <h3>Candidate Rating</h3>
+                    <p>Average candidate satisfaction score for AI interview experience</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-stat">72%</div>
+                    <h3>Faster Hiring</h3>
+                    <p>Improvement in time-to-hire through automated screening</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="final-cta-section">
+        <div class="final-cta-container">
+            <div class="final-cta-badge">
+                <i class="ph ph-rocket-launch"></i>
+                <span>Get Started</span>
+            </div>
+            <h2 class="final-cta-title">Ready to Scale Your Interviews?</h2>
+            <p class="final-cta-description">
+                <span class="text-primary">Join innovative companies using AI to conduct better, faster initial screenings.</span> 
+                <span class="text-secondary">Transform your hiring process with intelligent conversations that never miss a detail and always maintain professionalism.</span>
+            </p>
+            <div class="final-cta-actions">
+                <button class="button-primary large demo-btn">Schedule AI Call Demo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Dassh</h3>
+                    <p class="footer-tagline">AI-powered hiring that finds the right talent for your team.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Features</h4>
+                        <a href="cv-screening.html">CV Screening</a>
+                        <a href="ai-call.html">AI Call</a>
+                        <a href="assessments.html">Assessments</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <a href="#about">About</a>
+                        <a href="#careers">Careers</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dassh Technovation Pvt Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Form Modal -->
+    <div class="modal-overlay" id="contact-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Request Demo</h2>
+                <button class="modal-close" id="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Your Role</label>
+                        <select id="role" name="role">
+                            <option value="">Select your role</option>
+                            <option value="hr-manager">HR Manager</option>
+                            <option value="recruiter">Recruiter</option>
+                            <option value="ceo">CEO/Founder</option>
+                            <option value="hiring-manager">Hiring Manager</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your hiring needs..."></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" id="cancel-btn">Cancel</button>
+                        <button type="submit" class="button-primary">Request Demo</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function requestDemoCall() {
+            const phoneInput = document.getElementById('phone-input');
+            const phoneNumber = phoneInput.value.trim();
+            
+            if (!phoneNumber) {
+                alert('Please enter your phone number');
+                return;
+            }
+            
+            // Basic phone number validation
+            const phoneRegex = /^\+?[\d\s\-\(\)\.]{10,}$/;
+            if (!phoneRegex.test(phoneNumber)) {
+                alert('Please enter a valid phone number');
+                return;
+            }
+            
+            // Change button state to show loading
+            const button = document.querySelector('.demo-call-btn');
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="ph ph-circle-notch"></i> Calling...';
+            button.disabled = true;
+            
+            // Simulate API call (replace with actual implementation)
+            setTimeout(() => {
+                alert(`Demo call scheduled for ${phoneNumber}. You'll receive a call within 30 seconds to experience our AI assistant.`);
+                
+                // Reset button
+                button.innerHTML = originalText;
+                button.disabled = false;
+                
+                // Clear input
+                phoneInput.value = '';
+            }, 1500);
+        }
+        
+        // Format phone number as user types
+        document.getElementById('phone-input').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 0) {
+                if (value.length <= 3) {
+                    value = `(${value}`;
+                } else if (value.length <= 6) {
+                    value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
+                } else {
+                    value = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
+                }
+                e.target.value = value;
+            }
+        });
+    </script>
+</body>
+</html> 

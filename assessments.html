@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessments - Dassh | AI-Powered Skills Testing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://use.typekit.net/dhl5zqv.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="/" class="nav-logo">Dassh</a>
+                <div class="nav-links">
+                    <a href="cv-screening.html">CV Screening</a>
+                    <a href="ai-call.html">AI Call</a>
+                    <a href="assessments.html" class="active">Assessments</a>
+                </div>
+            </div>
+            <div class="nav-right">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                    <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                </button>
+                <button class="nav-button primary" id="demo-btn">Request Demo</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1 class="hero-title">
+                Skills assessments that reveal true potential, not just test-taking ability
+            </h1>
+            <p class="hero-description">
+                <span class="text-primary">Go beyond traditional testing with adaptive AI assessments that reveal true potential and real-world capabilities.</span> 
+                <span class="text-secondary">Evaluate problem-solving abilities, job-specific competencies, and cognitive patterns that predict success—delivering insights that transform your hiring decisions.</span>
+            </p>
+            <div class="hero-actions">
+                <button class="button-primary large demo-btn">Try Sample Assessment</button>
+            </div>
+            
+            <div class="hero-image">
+                <div class="hero-mockup">
+                    <div class="hero-image-container">
+                        <img src="images/header-image.png" alt="Assessment Platform Interface" class="hero-main-image">
+                        <div class="hero-image-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Assessment Types Section -->
+    <section class="demo-section">
+        <div class="demo-container">
+            <div class="section-badge badge-indigo">
+                <i class="ph ph-exam"></i>
+                <span>Assessment Types</span>
+            </div>
+            <h2 class="demo-title">Comprehensive Skills Evaluation</h2>
+            <p class="demo-subtitle">
+                <span class="text-primary">Multi-dimensional assessments that adapt to each candidate's responses and skill level in real-time.</span> 
+                <span class="text-secondary">Watch our intelligent testing platform adjust difficulty and question types dynamically, providing accurate measurements while maintaining candidate engagement.</span>
+            </p>
+            
+            <div class="assessment-types">
+                <div class="assessment-tab-nav">
+                    <button class="assessment-tab active" data-tab="technical">Technical Skills</button>
+                    <button class="assessment-tab" data-tab="cognitive">Cognitive Abilities</button>
+                    <button class="assessment-tab" data-tab="behavioral">Behavioral Traits</button>
+                    <button class="assessment-tab" data-tab="situational">Situational Judgment</button>
+                </div>
+                
+                <div class="assessment-content">
+                    <div class="assessment-panel active" id="technical">
+                        <div class="assessment-details">
+                            <h3>Technical Skills Assessment</h3>
+                            <p>Evaluate coding abilities, technical knowledge, and hands-on problem-solving skills</p>
+                            <ul class="assessment-features">
+                                <li>Live coding challenges with real-time evaluation</li>
+                                <li>Framework-specific questions (React, Python, Java, etc.)</li>
+                                <li>Code review and debugging scenarios</li>
+                                <li>System design and architecture questions</li>
+                                <li>Database and API integration tasks</li>
+                            </ul>
+                        </div>
+                        <div class="assessment-visual">
+                            <div class="mockup-placeholder">
+                                <div class="mockup-icon">💻</div>
+                                <p>Coding Interface</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="assessment-panel" id="cognitive">
+                        <div class="assessment-details">
+                            <h3>Cognitive Abilities</h3>
+                            <p>Measure critical thinking, logical reasoning, and learning capacity</p>
+                            <ul class="assessment-features">
+                                <li>Numerical and abstract reasoning</li>
+                                <li>Pattern recognition and logical sequences</li>
+                                <li>Memory and processing speed tests</li>
+                                <li>Attention to detail evaluation</li>
+                                <li>Problem-solving under time pressure</li>
+                            </ul>
+                        </div>
+                        <div class="assessment-visual">
+                            <div class="mockup-placeholder">
+                                <div class="mockup-icon">🧠</div>
+                                <p>Cognitive Tests</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="assessment-panel" id="behavioral">
+                        <div class="assessment-details">
+                            <h3>Behavioral Traits</h3>
+                            <p>Understand personality, work style, and cultural fit indicators</p>
+                            <ul class="assessment-features">
+                                <li>Big Five personality assessment</li>
+                                <li>Communication and collaboration style</li>
+                                <li>Leadership potential and teamwork</li>
+                                <li>Stress management and resilience</li>
+                                <li>Motivation and career goals alignment</li>
+                            </ul>
+                        </div>
+                        <div class="assessment-visual">
+                            <div class="mockup-placeholder">
+                                <div class="mockup-icon">👥</div>
+                                <p>Personality Profile</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="assessment-panel" id="situational">
+                        <div class="assessment-details">
+                            <h3>Situational Judgment</h3>
+                            <p>Evaluate decision-making in realistic workplace scenarios</p>
+                            <ul class="assessment-features">
+                                <li>Role-specific workplace scenarios</li>
+                                <li>Ethical dilemma responses</li>
+                                <li>Customer service situations</li>
+                                <li>Team conflict resolution</li>
+                                <li>Priority management and delegation</li>
+                            </ul>
+                        </div>
+                        <div class="assessment-visual">
+                            <div class="mockup-placeholder">
+                                <div class="mockup-icon">⚖️</div>
+                                <p>Scenario Analysis</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="scale-section">
+        <div class="scale-container">
+            <div class="section-badge badge-purple">
+                <i class="ph ph-lightning"></i>
+                <span>AI Features</span>
+            </div>
+            <h2 class="scale-title">Adaptive Intelligence That Learns</h2>
+            <p class="scale-subtitle">
+                <span class="text-primary">AI-powered assessments that adjust difficulty and question types based on candidate responses in real-time.</span> 
+                <span class="text-secondary">Experience intelligent testing that learns from each interaction, providing precise skill measurement while preventing cheating and ensuring fair evaluation.</span>
+            </p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Adaptive Testing</h3>
+                    <p>Questions adjust in real-time based on performance, providing accurate skill measurement</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🚫</div>
+                    <h3>Anti-Cheating Technology</h3>
+                    <p>Advanced proctoring with browser monitoring, plagiarism detection, and biometric verification</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Detailed Analytics</h3>
+                    <p>Comprehensive reports with skill breakdowns, competency mapping, and improvement recommendations</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Instant Scoring</h3>
+                    <p>Immediate results with confidence intervals and percentile rankings</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Custom Assessments</h3>
+                    <p>Build role-specific tests with your own questions and evaluation criteria</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Multi-Platform Support</h3>
+                    <p>Works seamlessly on desktop, tablet, and mobile devices with offline capability</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Solutions -->
+    <section class="ai-stack-section">
+        <div class="ai-stack-container">
+            <div class="section-badge badge-teal">
+                <i class="ph ph-buildings"></i>
+                <span>Industry Solutions</span>
+            </div>
+            <h2 class="ai-stack-title">Tailored for Every Industry</h2>
+            <div class="industry-grid">
+                <div class="industry-card">
+                    <div class="industry-icon">💼</div>
+                    <h3>Finance & Banking</h3>
+                    <p>Risk assessment, compliance knowledge, and quantitative analysis skills</p>
+                    <div class="industry-skills">
+                        <span class="skill-tag">Financial Modeling</span>
+                        <span class="skill-tag">Risk Management</span>
+                        <span class="skill-tag">Regulatory Compliance</span>
+                    </div>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">⚕️</div>
+                    <h3>Healthcare</h3>
+                    <p>Medical knowledge, patient care scenarios, and clinical decision-making</p>
+                    <div class="industry-skills">
+                        <span class="skill-tag">Clinical Reasoning</span>
+                        <span class="skill-tag">Patient Safety</span>
+                        <span class="skill-tag">Medical Ethics</span>
+                    </div>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">🛍️</div>
+                    <h3>Retail & E-commerce</h3>
+                    <p>Customer service excellence, sales aptitude, and product knowledge</p>
+                    <div class="industry-skills">
+                        <span class="skill-tag">Customer Service</span>
+                        <span class="skill-tag">Sales Techniques</span>
+                        <span class="skill-tag">Product Knowledge</span>
+                    </div>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">🏭</div>
+                    <h3>Manufacturing</h3>
+                    <p>Safety protocols, quality control, and operational efficiency assessment</p>
+                    <div class="industry-skills">
+                        <span class="skill-tag">Safety Compliance</span>
+                        <span class="skill-tag">Quality Control</span>
+                        <span class="skill-tag">Process Optimization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Metrics -->
+    <section class="scale-section">
+        <div class="scale-container">
+            <div class="section-badge badge-green">
+                <i class="ph ph-trend-up"></i>
+                <span>Results & Impact</span>
+            </div>
+            <h2 class="scale-title">Measurable Impact on Hiring Quality</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-stat">92%</div>
+                    <h3>Prediction Accuracy</h3>
+                    <p>Correlation between assessment scores and actual job performance</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-stat">45%</div>
+                    <h3>Reduced Turnover</h3>
+                    <p>Lower employee turnover rate for candidates assessed with Dassh</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-stat">78%</div>
+                    <h3>Time Saved</h3>
+                    <p>Reduction in time spent on manual skill evaluation and testing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="final-cta-section">
+        <div class="final-cta-container">
+            <div class="final-cta-badge">
+                <i class="ph ph-rocket-launch"></i>
+                <span>Get Started</span>
+            </div>
+            <h2 class="final-cta-title">Ready to Assess Better?</h2>
+            <p class="final-cta-description">
+                <span class="text-primary">Join companies using AI-powered assessments to make smarter hiring decisions.</span> 
+                <span class="text-secondary">Discover true potential with adaptive testing that reveals skills, cognitive abilities, and cultural fit in ways traditional testing never could.</span>
+            </p>
+            <div class="final-cta-actions">
+                <button class="button-primary large demo-btn">Start Free Assessment</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Dassh</h3>
+                    <p class="footer-tagline">AI-powered hiring that finds the right talent for your team.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Features</h4>
+                        <a href="cv-screening.html">CV Screening</a>
+                        <a href="ai-call.html">AI Call</a>
+                        <a href="assessments.html">Assessments</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <a href="#about">About</a>
+                        <a href="#careers">Careers</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dassh Technovation Pvt Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Form Modal -->
+    <div class="modal-overlay" id="contact-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Request Demo</h2>
+                <button class="modal-close" id="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Your Role</label>
+                        <select id="role" name="role">
+                            <option value="">Select your role</option>
+                            <option value="hr-manager">HR Manager</option>
+                            <option value="recruiter">Recruiter</option>
+                            <option value="ceo">CEO/Founder</option>
+                            <option value="hiring-manager">Hiring Manager</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your hiring needs..."></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" id="cancel-btn">Cancel</button>
+                        <button type="submit" class="button-primary">Request Demo</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Assessment tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.assessment-tab');
+            const panels = document.querySelectorAll('.assessment-panel');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs and panels
+                    tabs.forEach(t => t.classList.remove('active'));
+                    panels.forEach(p => p.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    tab.classList.add('active');
+                    
+                    // Show corresponding panel
+                    const targetPanel = document.getElementById(tab.dataset.tab);
+                    if (targetPanel) {
+                        targetPanel.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
