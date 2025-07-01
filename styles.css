@@ -85,29 +85,8 @@
     --transition-slow: 350ms ease;
 }
 
-/* Badge Color Variations */
-.section-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-2);
-    padding: var(--space-2) var(--space-4);
-    background: var(--primary-bg);
-    color: var(--primary);
-    border-radius: var(--radius-xl);
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: var(--space-6);
-    transition: all var(--transition-fast);
-}
-
-.section-badge:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-}
-
-.section-badge i {
-    font-size: 16px;
-}
+/* OLD BADGE STYLES - REPLACED BY CONSISTENT DESIGN PATTERN ABOVE */
+/* Badge styling is now handled by the universal section badge styles */
 
 /* Badge Color Variations */
 .badge-purple {
@@ -5285,32 +5264,8 @@ section {
     margin-bottom: 4rem;
 }
 
-.section-title {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    margin-bottom: 1rem;
-    color: var(--text-primary);
-    line-height: 1.2;
-}
-
-.section-subtitle {
-    font-size: 1.125rem;
-    color: var(--text-secondary);
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.6;
-}
-
-.section-subtitle .text-primary {
-    color: var(--text-primary);
-    font-weight: 500;
-}
-
-.section-subtitle .text-secondary {
-    color: var(--text-secondary);
-    font-weight: 400;
-}
+/* OLD SECTION STYLES - REPLACED BY CONSISTENT DESIGN PATTERN ABOVE */
+/* These are now handled by the universal section styling */
 
 /* Typography Hierarchy */
 h1, h2, h3, h4, h5, h6 {
@@ -5388,7 +5343,8 @@ h4 {
 .text-left { text-align: left; }
 .text-right { text-align: right; }
 
-/* Responsive typography */
+/* OLD RESPONSIVE STYLES - REPLACED BY CONSISTENT DESIGN PATTERN ABOVE */
+/* Responsive typography is now handled by the universal section styling */
 @media (max-width: 768px) {
     section {
         padding: 3rem 0;
@@ -5396,18 +5352,6 @@ h4 {
     
     .section-container {
         padding: 0 1rem;
-    }
-    
-    .section-header {
-        margin-bottom: 2.5rem;
-    }
-    
-    .section-title {
-        margin-bottom: 0.75rem;
-    }
-    
-    .section-subtitle {
-        font-size: 1rem;
     }
 }
 
@@ -5676,5 +5620,236 @@ h4 {
 [data-theme="dark"] .form-group select:focus {
     border-color: var(--primary-light);
     box-shadow: 0 0 0 2px rgba(139, 93, 255, 0.2);
+}
+
+/* ===== CONSISTENT SECTION DESIGN PATTERN ===== */
+/* Based on the FAQ/Support section design for consistency across all sections */
+
+/* Universal Section Styling */
+.section-title,
+.how-it-works-title,
+.video-title,
+.scale-title,
+.ai-stack-title,
+.faq-title,
+.about-title,
+.final-cta-title,
+.testimonials-title,
+.security-title,
+.integrations-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+}
+
+.section-subtitle,
+.how-it-works-subtitle,
+.video-subtitle,
+.scale-description,
+.ai-stack-description,
+.faq-description,
+.about-description,
+.final-cta-description,
+.testimonials-subtitle,
+.security-description,
+.integrations-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    max-width: 700px;
+}
+
+/* Enhanced section badges - consistent with FAQ design */
+.section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: 12px 20px;
+    background: var(--primary-bg);
+    color: var(--primary);
+    border-radius: var(--radius-xl);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    transition: all var(--transition-fast);
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.section-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.section-badge i {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Section containers for consistent spacing */
+.section-header,
+.how-it-works-container > div:first-child,
+.video-container > div:first-child,
+.scale-header .scale-content-left,
+.ai-stack-container > div:first-child,
+.faq-header .faq-content-left,
+.about-container > div:first-child,
+.final-cta-container > div:first-child,
+.testimonials-container > div:first-child,
+.security-content > div:first-child,
+.integrations-container > div:first-child {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Special handling for two-column layouts */
+.scale-header,
+.faq-header,
+.assessment-header {
+    text-align: left;
+}
+
+.scale-header .scale-content-left,
+.faq-header .faq-content-left,
+.assessment-header .assessment-content-left {
+    text-align: left;
+    margin-bottom: 0;
+    max-width: none;
+}
+
+/* Sub-descriptions for additional context */
+.testimonials-sub-description,
+.integrations-sub-description {
+    font-size: 1.125rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+    margin-bottom: 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Text color variations for emphasis */
+.section-subtitle .text-primary,
+.scale-description .text-primary,
+.ai-stack-description .text-primary,
+.faq-description .text-primary,
+.about-description .text-primary,
+.final-cta-description .text-primary,
+.testimonials-subtitle .text-primary,
+.security-description .text-primary {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.section-subtitle .text-secondary,
+.scale-description .text-secondary,
+.ai-stack-description .text-secondary,
+.faq-description .text-secondary,
+.about-description .text-secondary,
+.final-cta-description .text-secondary,
+.testimonials-subtitle .text-secondary,
+.security-description .text-secondary {
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .section-title,
+    .how-it-works-title,
+    .video-title,
+    .scale-title,
+    .ai-stack-title,
+    .faq-title,
+    .about-title,
+    .final-cta-title,
+    .testimonials-title,
+    .security-title,
+    .integrations-title {
+        font-size: clamp(2rem, 6vw, 2.5rem);
+        margin-bottom: 1rem;
+    }
+    
+    .section-subtitle,
+    .how-it-works-subtitle,
+    .video-subtitle,
+    .scale-description,
+    .ai-stack-description,
+    .faq-description,
+    .about-description,
+    .final-cta-description,
+    .testimonials-subtitle,
+    .security-description,
+    .integrations-subtitle {
+        font-size: 1.125rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-badge {
+        padding: 10px 16px;
+        font-size: 13px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-badge i {
+        font-size: 16px;
+    }
+    
+    .section-header,
+    .how-it-works-container > div:first-child,
+    .video-container > div:first-child,
+    .ai-stack-container > div:first-child,
+    .about-container > div:first-child,
+    .final-cta-container > div:first-child,
+    .testimonials-container > div:first-child,
+    .security-content > div:first-child,
+    .integrations-container > div:first-child {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title,
+    .how-it-works-title,
+    .video-title,
+    .scale-title,
+    .ai-stack-title,
+    .faq-title,
+    .about-title,
+    .final-cta-title,
+    .testimonials-title,
+    .security-title,
+    .integrations-title {
+        font-size: clamp(1.75rem, 7vw, 2.25rem);
+        line-height: 1.2;
+    }
+    
+    .section-subtitle,
+    .how-it-works-subtitle,
+    .video-subtitle,
+    .scale-description,
+    .ai-stack-description,
+    .faq-description,
+    .about-description,
+    .final-cta-description,
+    .testimonials-subtitle,
+    .security-description,
+    .integrations-subtitle {
+        font-size: 1rem;
+    }
+    
+    .testimonials-sub-description,
+    .integrations-sub-description {
+        font-size: 1rem;
+    }
 }
 
