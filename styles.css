@@ -690,7 +690,6 @@ a, li, ul, ol, table, th, td, caption,
 /* Hero Image/Mockup */
 .hero-image {
     margin-top: var(--space-12);
-    perspective: 1500px;
     animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
@@ -698,19 +697,10 @@ a, li, ul, ol, table, th, td, caption,
     max-width: 100%;
     width: 100%;
     margin: 4rem auto 0;
-    transform: translateZ(0);
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    transform-style: preserve-3d;
-}
-
-.hero-mockup:hover {
-    /* Simplified hover effect */
 }
 
 .hero-image-container {
     position: relative;
-    transform-style: preserve-3d;
-    animation: heroFloat 6s ease-in-out infinite;
 }
 
 .hero-image-container::after {
@@ -723,6 +713,7 @@ a, li, ul, ol, table, th, td, caption,
     background: linear-gradient(transparent, var(--background));
     pointer-events: none;
     z-index: 1;
+    border-radius: 0 0 24px 24px;
 }
 
 [data-theme="dark"] .hero-image-container::after {
@@ -732,12 +723,11 @@ a, li, ul, ol, table, th, td, caption,
 .hero-main-image {
     width: 100%;
     height: auto;
-    border-radius: 20px;
+    border-radius: 24px;
     box-shadow: 
         0 40px 80px rgba(0, 0, 0, 0.08),
         0 20px 40px rgba(0, 0, 0, 0.05),
         0 8px 16px rgba(0, 0, 0, 0.05);
-    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Dark mode header image styling */
@@ -748,50 +738,7 @@ a, li, ul, ol, table, th, td, caption,
         0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.hero-image-glow {
-    position: absolute;
-    top: -15px;
-    left: -15px;
-    right: -15px;
-    bottom: -15px;
-    background: linear-gradient(
-        45deg,
-        rgba(139, 92, 246, 0.08),
-        rgba(59, 130, 246, 0.08),
-        rgba(16, 185, 129, 0.08),
-        rgba(245, 101, 101, 0.08)
-    );
-    border-radius: 25px;
-    opacity: 0;
-    filter: blur(20px);
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    z-index: -1;
-    animation: glowPulse 6s ease-in-out infinite;
-}
 
-.hero-mockup:hover .hero-image-glow {
-    /* Simplified - no complex glow effects */
-}
-
-@keyframes heroFloat {
-    0%, 100% {
-        transform: translateY(0px) rotateZ(0deg);
-    }
-    50% {
-        transform: translateY(-10px) rotateZ(1deg);
-    }
-}
-
-@keyframes glowPulse {
-    0%, 100% {
-        opacity: 0.1;
-        transform: scale(0.98);
-    }
-    50% {
-        opacity: 0.2;
-        transform: scale(1.02);
-    }
-}
 
 .mockup-browser {
     background: transparent;
@@ -2413,23 +2360,14 @@ a, li, ul, ol, table, th, td, caption,
     .hero-mockup {
         max-width: 100%;
         width: 100%;
-        transform: translateZ(0);
-    }
-
-    .hero-mockup:hover {
-        transform: translateY(-6px) scale(1.003);
-    }
-
-    .hero-image-container {
-        animation: heroFloat 8s ease-in-out infinite;
     }
 
     .hero-main-image {
-        border-radius: 16px;
-        box-shadow: 
-            0 30px 60px rgba(0, 0, 0, 0.12),
-            0 15px 30px rgba(0, 0, 0, 0.08),
-            0 6px 12px rgba(0, 0, 0, 0.08);
+        border-radius: 20px;
+    }
+    
+    .hero-image-container::after {
+        border-radius: 0 0 20px 20px;
     }
     
     .mockup-content {
@@ -2528,38 +2466,19 @@ a, li, ul, ol, table, th, td, caption,
     
     .hero-image {
         margin-top: var(--space-6);
-        perspective: 1000px;
     }
     
     .hero-mockup {
         max-width: 100%;
         width: 100%;
-        transform: translateZ(0);
-    }
-
-    .hero-mockup:hover {
-        transform: translateY(-4px) scale(1.002);
-    }
-
-    .hero-image-container {
-        animation: heroFloat 10s ease-in-out infinite;
     }
 
     .hero-main-image {
-        border-radius: 12px;
-        box-shadow: 
-            0 20px 40px rgba(0, 0, 0, 0.1),
-            0 10px 20px rgba(0, 0, 0, 0.06),
-            0 4px 8px rgba(0, 0, 0, 0.06);
+        border-radius: 16px;
     }
-
-    .hero-image-glow {
-        top: -15px;
-        left: -15px;
-        right: -15px;
-        bottom: -15px;
-        border-radius: 20px;
-        filter: blur(20px);
+    
+    .hero-image-container::after {
+        border-radius: 0 0 16px 16px;
     }
     
     .mockup-content {
