@@ -5545,7 +5545,7 @@ h4 {
 }
 
 /* ===== CONSISTENT SECTION DESIGN PATTERN ===== */
-/* Based on the FAQ/Support section design for consistency across all sections */
+/* Based on the reference image design for consistency across all sections */
 
 /* Universal Section Styling */
 .section-title,
@@ -5559,13 +5559,14 @@ h4 {
 .testimonials-title,
 .security-title,
 .integrations-title {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    line-height: 1.1;
+    font-size: clamp(2.8rem, 5.5vw, 4rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
     color: var(--text-primary);
     margin-bottom: 1.5rem;
-    max-width: 800px;
+    max-width: 900px;
+    text-align: center;
 }
 
 .section-subtitle,
@@ -5584,49 +5585,62 @@ h4 {
     color: var(--text-secondary);
     margin-bottom: 2rem;
     max-width: 700px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Enhanced section badges - consistent with FAQ design */
+/* Enhanced section badges - based on reference image design */
 .section-badge {
     display: inline-flex;
     align-items: center;
-    gap: var(--space-2);
-    padding: 12px 20px;
-    background: var(--primary-bg);
-    color: var(--primary);
-    border-radius: var(--radius-xl);
-    font-size: 14px;
+    gap: 8px;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #8b5cf6, #a855f7);
+    color: white;
+    border-radius: 20px;
+    font-size: 13px;
     font-weight: 600;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     transition: all var(--transition-fast);
     text-transform: none;
     letter-spacing: 0;
+    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.2);
 }
 
 .section-badge:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
 }
 
 .section-badge i {
-    font-size: 18px;
+    font-size: 14px;
     opacity: 0.9;
 }
 
 /* Section containers for consistent spacing */
 .section-header,
-.how-it-works-container > div:first-child,
-.video-container > div:first-child,
-.scale-header .scale-content-left,
-.ai-stack-container > div:first-child,
-.faq-header .faq-content-left,
-.about-container > div:first-child,
-.final-cta-container > div:first-child,
-.testimonials-container > div:first-child,
-.security-content > div:first-child,
-.integrations-container > div:first-child {
+.how-it-works-container,
+.video-container,
+.ai-stack-container,
+.about-container,
+.final-cta-container,
+.testimonials-container,
+.security-content,
+.integrations-container {
     text-align: center;
     margin-bottom: 4rem;
+}
+
+.section-header > *,
+.how-it-works-container > *:not(.process-flow),
+.video-container > *:not(.video-player-wrapper),
+.ai-stack-container > *:not(.ai-stack-grid),
+.about-container > *:not(.story-cards-grid),
+.final-cta-container > *:not(.final-cta-actions),
+.testimonials-container > *:not(.testimonials-grid):not(.testimonials-stats),
+.security-content > *:not(.security-features):not(.compliance-grid),
+.integrations-container > *:not(.integrations-grid) {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
