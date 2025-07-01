@@ -92,11 +92,13 @@
 .badge-purple {
     background: var(--primary-bg);
     color: var(--primary);
+    box-shadow: 0 2px 8px rgba(75, 85, 99, 0.15);
 }
 
 .badge-blue {
     background: rgba(37, 99, 235, 0.1);
     color: #2563eb;
+    box-shadow: 0 2px 8px rgba(75, 85, 99, 0.15);
 }
 
 .badge-green {
@@ -108,36 +110,43 @@
 .badge-orange {
     background: rgba(249, 115, 22, 0.1);
     color: #f97316;
+    box-shadow: 0 2px 8px rgba(75, 85, 99, 0.15);
 }
 
 .badge-pink {
     background: rgba(236, 72, 153, 0.1);
     color: #ec4899;
+    box-shadow: 0 2px 8px rgba(75, 85, 99, 0.15);
 }
 
 .badge-indigo {
     background: rgba(99, 102, 241, 0.1);
     color: #6366f1;
+    box-shadow: 0 2px 8px rgba(75, 85, 99, 0.15);
 }
 
 .badge-teal {
     background: rgba(20, 184, 166, 0.1);
     color: #14b8a6;
+    box-shadow: 0 2px 8px rgba(75, 85, 99, 0.15);
 }
 
 .badge-amber {
     background: rgba(245, 158, 11, 0.1);
     color: #f59e0b;
+    box-shadow: 0 2px 8px rgba(75, 85, 99, 0.15);
 }
 
 [data-theme="dark"] .section-badge {
     background: rgba(139, 93, 255, 0.1);
     color: var(--primary-light);
+    box-shadow: 0 2px 8px rgba(75, 85, 99, 0.25);
 }
 
 [data-theme="dark"] .badge-blue {
     background: rgba(59, 130, 246, 0.1);
     color: #60a5fa;
+    box-shadow: 0 2px 8px rgba(75, 85, 99, 0.25);
 }
 
 [data-theme="dark"] .badge-green {
@@ -149,26 +158,31 @@
 [data-theme="dark"] .badge-orange {
     background: rgba(251, 146, 60, 0.1);
     color: #fb923c;
+    box-shadow: 0 2px 8px rgba(75, 85, 99, 0.25);
 }
 
 [data-theme="dark"] .badge-pink {
     background: rgba(244, 114, 182, 0.1);
     color: #f472b6;
+    box-shadow: 0 2px 8px rgba(75, 85, 99, 0.25);
 }
 
 [data-theme="dark"] .badge-indigo {
     background: rgba(129, 140, 248, 0.1);
     color: #818cf8;
+    box-shadow: 0 2px 8px rgba(75, 85, 99, 0.25);
 }
 
 [data-theme="dark"] .badge-teal {
     background: rgba(45, 212, 191, 0.1);
     color: #2dd4bf;
+    box-shadow: 0 2px 8px rgba(75, 85, 99, 0.25);
 }
 
 [data-theme="dark"] .badge-amber {
     background: rgba(251, 191, 36, 0.1);
     color: #fbbf24;
+    box-shadow: 0 2px 8px rgba(75, 85, 99, 0.25);
 }
 
 /* Dark mode variables */
@@ -5607,12 +5621,12 @@ h4 {
     transition: all var(--transition-fast);
     text-transform: none;
     letter-spacing: 0;
-    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.2);
+    box-shadow: 0 2px 8px rgba(75, 85, 99, 0.15);
 }
 
 .section-badge:hover {
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 4px 12px rgba(75, 85, 99, 0.25);
 }
 
 .section-badge i {
