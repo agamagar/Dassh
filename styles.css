@@ -451,13 +451,13 @@ a, li, ul, ol, table, th, td, caption,
 
 .nav-button.primary {
     color: white;
-    background: var(--primary);
-    border-color: var(--primary);
+    background: var(--button-primary-bg);
+    border-color: var(--button-primary-bg);
 }
 
 .nav-button.primary:hover {
-    background: var(--primary-dark);
-    border-color: var(--primary-dark);
+    background: var(--button-primary-bg-hover);
+    border-color: var(--button-primary-bg-hover);
 }
 
 [data-theme="dark"] .nav-button.primary {
@@ -3547,34 +3547,14 @@ a, li, ul, ol, table, th, td, caption,
 
 /* Assessment Header Layout */
 .assessment-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: start;
+    display: flex;
+    justify-content: center;
     margin-top: 3rem;
 }
 
-.assessment-content-left {
-    padding-right: 2rem;
-}
-
-.assessment-intro h3 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--text-primary);
-    letter-spacing: -0.02em;
-}
-
-.assessment-intro p {
-    font-size: 1.125rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin: 0;
-}
-
 .assessment-accordion-right {
-    flex: 1;
+    max-width: 800px;
+    width: 100%;
 }
 
 .assessment-accordion {
@@ -3676,13 +3656,11 @@ a, li, ul, ol, table, th, td, caption,
 
 @media (max-width: 768px) {
     .assessment-header {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
+        margin-top: 2rem;
     }
     
-    .assessment-content-left {
-        padding-right: 0;
-        text-align: center;
+    .assessment-accordion-right {
+        max-width: 100%;
     }
     
     .assessment-accordion .accordion-content.active {
