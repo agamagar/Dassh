@@ -5559,14 +5559,16 @@ h4 {
 .testimonials-title,
 .security-title,
 .integrations-title {
-    font-size: clamp(2.8rem, 5.5vw, 4rem);
-    font-weight: 800;
-    letter-spacing: -0.04em;
-    line-height: 1.05;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
     color: var(--text-primary);
-    margin-bottom: 1.5rem;
-    max-width: 900px;
+    margin-bottom: var(--space-5);
+    max-width: 700px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section-subtitle,
@@ -5580,14 +5582,12 @@ h4 {
 .testimonials-subtitle,
 .security-description,
 .integrations-subtitle {
-    font-size: 1.25rem;
+    font-size: clamp(16px, 2vw, 18px);
     line-height: 1.6;
     color: var(--text-secondary);
-    margin-bottom: 2rem;
-    max-width: 700px;
+    margin: 0 auto var(--space-8);
+    max-width: 550px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* Enhanced section badges - based on reference image design */
@@ -5711,8 +5711,8 @@ h4 {
     .testimonials-title,
     .security-title,
     .integrations-title {
-        font-size: clamp(2rem, 6vw, 2.5rem);
-        margin-bottom: 1rem;
+        font-size: clamp(28px, 5vw, 42px);
+        margin-bottom: var(--space-4);
     }
     
     .section-subtitle,
@@ -5726,8 +5726,8 @@ h4 {
     .testimonials-subtitle,
     .security-description,
     .integrations-subtitle {
-        font-size: 1.125rem;
-        margin-bottom: 1.5rem;
+        font-size: clamp(15px, 2vw, 17px);
+        margin: 0 auto var(--space-6);
     }
     
     .section-badge {
@@ -5765,8 +5765,9 @@ h4 {
     .testimonials-title,
     .security-title,
     .integrations-title {
-        font-size: clamp(1.75rem, 7vw, 2.25rem);
-        line-height: 1.2;
+        font-size: clamp(22px, 7vw, 28px);
+        line-height: 1.1;
+        margin-bottom: var(--space-3);
     }
     
     .section-subtitle,
@@ -5780,7 +5781,8 @@ h4 {
     .testimonials-subtitle,
     .security-description,
     .integrations-subtitle {
-        font-size: 1rem;
+        font-size: clamp(14px, 2vw, 16px);
+        margin: 0 auto var(--space-5);
     }
     
     .testimonials-sub-description,
