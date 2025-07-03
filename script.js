@@ -2,6 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
+    initMobileMenu();
     initSmoothScroll();
     initIntersectionObserver();
     initThemeToggle();
@@ -266,6 +267,75 @@ function initNavigation() {
             ticking = true;
         }
     });
+}
+
+// Mobile menu functionality
+function initMobileMenu() {
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+    const mobileDemoBtn = document.getElementById('mobile-demo-btn');
+    
+    if (!mobileMenuToggle || !mobileMenu) {
+        console.error('Mobile menu elements not found');
+        return;
+    }
+    
+    // Toggle mobile menu
+    mobileMenuToggle.addEventListener('click', () => {
+        const isActive = mobileMenuToggle.classList.contains('active');
+        
+        if (isActive) {
+            closeMobileMenu();
+        } else {
+            openMobileMenu();
+        }
+    });
+    
+    // Close mobile menu when clicking on links
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            closeMobileMenu();
+        });
+    });
+    
+    // Close mobile menu when clicking demo button
+    if (mobileDemoBtn) {
+        mobileDemoBtn.addEventListener('click', () => {
+            closeMobileMenu();
+            // Trigger the main demo modal
+            const mainDemoBtn = document.getElementById('demo-btn');
+            if (mainDemoBtn) {
+                mainDemoBtn.click();
+            }
+        });
+    }
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+            closeMobileMenu();
+        }
+    });
+    
+    // Close mobile menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileMenuToggle.classList.contains('active')) {
+            closeMobileMenu();
+        }
+    });
+    
+    function openMobileMenu() {
+        mobileMenuToggle.classList.add('active');
+        mobileMenu.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+    
+    function closeMobileMenu() {
+        mobileMenuToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
 }
 
 // Smooth scroll behavior

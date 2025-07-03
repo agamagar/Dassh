@@ -61,7 +61,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://use.typekit.net/dhl5zqv.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web@2.0.3"></script>
+    <script>
+        // Fallback for Phosphor icons if main CDN fails
+        if (!window.ph) {
+            const fallbackScript = document.createElement('script');
+            fallbackScript.src = 'https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.0.3/src/index.js';
+            document.head.appendChild(fallbackScript);
+        }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -85,7 +93,35 @@
                     </svg>
                 </button>
                 <button class="nav-button primary" id="demo-btn">Request Demo</button>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
             </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-section">
+                    <h4 class="mobile-menu-title">Navigate</h4>
+                    <a href="#how-it-works" class="mobile-menu-link">How it Works</a>
+                    <a href="#demo" class="mobile-menu-link">Demo</a>
+                    <a href="#cv-screening" class="mobile-menu-link">Features</a>
+                    <a href="#ai-call" class="mobile-menu-link">AI Stack</a>
+                    <a href="#faq" class="mobile-menu-link">FAQ</a>
+                    <a href="#about" class="mobile-menu-link">About</a>
+                </div>
+                <div class="mobile-menu-section">
+                    <h4 class="mobile-menu-title">Products</h4>
+                    <a href="cv-screening.html" class="mobile-menu-link">CV Screening</a>
+                    <a href="ai-call.html" class="mobile-menu-link">AI Call</a>
+                    <a href="assessments.html" class="mobile-menu-link">Assessments</a>
+                </div>
+                <button class="nav-button primary mobile-demo-btn" id="mobile-demo-btn">Request Demo</button>
+            </div>
+        </div>
         </div>
     </nav>
 
@@ -122,7 +158,7 @@
 
     <!-- How It Works Section -->
     <section class="how-it-works-section" id="how-it-works">
-        <div class="how-it-works-container">
+        <div class="how-it-works-container center-text-content">
             <div class="section-badge badge-amber">
                 <i class="ph ph-flow-arrow"></i>
                 <span>How it works</span>
@@ -220,7 +256,7 @@
 
     <!-- Custom Video Player Section -->
     <section class="video-section" id="demo">
-        <div class="video-container">
+        <div class="video-container center-text-content">
                             <div class="section-badge badge-blue">
                 <i class="ph ph-chart-bar"></i>
                 <span>Product Demo</span>
@@ -347,7 +383,7 @@
 
     <!-- AI Stack Section -->
     <section class="ai-stack-section" id="ai-call">
-        <div class="ai-stack-container">
+        <div class="ai-stack-container center-text-content">
                                     <div class="section-badge badge-purple">
                 <i class="ph ph-cpu"></i>
                 <span>AI Technology</span>
@@ -357,7 +393,7 @@
                 <span class="text-primary">Advanced AI technology that understands your unique hiring requirements.</span> 
                 <span class="text-secondary">Our intelligent system adapts to your company culture, role specifications, and screening preferences.</span>
             </p>
-            <div class="ai-stack-grid">
+            <div class="ai-stack-grid center-horizontal">
                 <div class="ai-stack-card">
                     <div class="ai-stack-icon">
                         <i class="ph ph-target"></i>
@@ -385,7 +421,7 @@
 
     <!-- Testimonials Section -->
     <section class="testimonials-section">
-        <div class="testimonials-container">
+        <div class="testimonials-container center-text-content">
                             <div class="section-badge badge-amber">
                 <i class="ph ph-quotes"></i>
                 <span>Customer Stories</span>
@@ -394,7 +430,7 @@
             <p class="testimonials-subtitle">See how Dassh is transforming hiring processes across industries</p>
             <p class="testimonials-sub-description">From startups to enterprise organizations, companies are achieving 75% faster hiring with better candidate quality using our AI-powered platform.</p>
             
-            <div class="testimonials-grid">
+            <div class="testimonials-grid center-horizontal">
                 <div class="testimonial-card">
                     <div class="testimonial-content">
                         <p>"Dassh reduced our time-to-hire by 75%. The AI screening is incredibly accurate, and the automated calls save us 15+ hours per week. It's like having a full-time recruiter that never sleeps."</p>
@@ -459,7 +495,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq-section">
+    <section class="faq-section" id="faq">
         <div class="faq-container">
             <div class="faq-header">
                 <div class="faq-content-left">
@@ -572,7 +608,7 @@
 
     <!-- Integration Partners Section -->
     <section class="integrations-section">
-        <div class="integrations-container">
+        <div class="integrations-container center-text-content">
                             <div class="section-badge badge-teal">
                 <i class="ph ph-plugs-connected"></i>
                 <span>Integrations</span>
@@ -581,7 +617,7 @@
             <p class="integrations-subtitle">Dassh integrates with your favorite HR tools and platforms to fit perfectly into your existing workflow</p>
 
             
-            <div class="integrations-grid">
+            <div class="integrations-grid center-horizontal">
                 <div class="integration-category ats-category">
                     <h3>Applicant Tracking Systems</h3>
                     <div class="integration-items">
@@ -676,9 +712,9 @@
     </section>
 
     <!-- About Section -->
-    <section class="about-section">
+    <section class="about-section" id="about">
         <div class="about-container">
-            <div class="about-content">
+            <div class="about-content center-text-content">
                 <div class="section-badge badge-orange">
                     <i class="ph ph-graduation-cap"></i>
                     <span>Our Story</span>
@@ -808,7 +844,7 @@
 
     <!-- Final CTA Section -->
     <section class="final-cta-section">
-        <div class="final-cta-container">
+        <div class="final-cta-container center-text-content">
                             <div class="section-badge badge-blue">
                 <i class="ph ph-rocket-launch"></i>
                 <span>Get Started</span>
